@@ -3,4 +3,6 @@
     --horizontal-space: 20px;
     --main-border: 1px solid rgba(0, 0, 0, 0.1);
     --gray: rgba(0, 0, 0, 0.3);
+    --bg-black: #2e2e34;
+    --light-blue: #05ebf5;
 }
