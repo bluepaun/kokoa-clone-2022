@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>repl.it</title>
+    </head>
+
+    <body>
+        <h1>Create An Account</h1>
+        <form>
+            <lable for="frist_name">First name</lable>
+            <input
+                id="frist_name"
+                type="text"
+                placeholder="First name"
+                required
+            />
+            <br />
+            <lable for="last_name">Last name</lable>
+            <input
+                id="last_name"
+                type="text"
+                placeholder="Last name"
+                required
+            />
+            <br />
+            <lable for="email">Email</lable>
+            <input id="email" type="email" placeholder="email" required />
+            <br />
+            <lable for="username">Username</lable>
+            <input id="usernamae" type="text" placeholder="Username" required />
+            <br />
+            <lable for="password">Password</lable>
+            <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                required
+                minlength="10"
+            />
+            <br />
+            <lable for="birth_date">Birth date</lable>
+            <input id="birth_date" type="date" required />
+            <br />
+            <lable for="happiness">How happy are you</lable>
+            <input
+                id="happiness"
+                type="range"
+                list="tickmarks"
+                min="0"
+                max="100"
+                step="10"
+                required
+            />
+            <datalist id="tickmarks">
+                <option value="0"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100"></option>
+            </datalist>
+            <br />
+            <lable for="fav_color">What is your fav. color?</lable>
+            <input id="fav_color" type="color" required />
+            <br />
+            <input type="submit" value="Create account" />
+            <br />
+        </form>
+    </body>
+</html>

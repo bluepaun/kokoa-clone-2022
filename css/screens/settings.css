@@ -1,0 +1,41 @@
+.settings-list {
+    margin: 0px 10px;
+    overflow: auto;
+}
+
+.settings-setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+
+.settings-setting:nth-child(n + 2) {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.settings-setting__column {
+    display: flex;
+    align-items: center;
+}
+
+.settings-setting__column:nth-child(1) div {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+}
+.settings-setting__column span {
+    font-size: 1.7em;
+}
+
+.settings-setting__column:last-child span {
+    opacity: 0.5;
+}
+
+.settings-list .divider {
+    margin: 40px 0px;
+}
