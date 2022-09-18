@@ -1,6 +1,7 @@
 .settings-list {
     margin: 0px 10px;
-    overflow: auto;
+    overflow-y: auto;
+    margin-bottom: 60px;
 }
 
 .settings-setting {
@@ -37,5 +38,7 @@
 }
 
 .settings-list .divider {
-    margin: 40px 0px;
+    margin-top: 20px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
