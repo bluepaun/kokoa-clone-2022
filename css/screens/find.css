@@ -11,13 +11,13 @@
 
 .recommended-friends__title {
     font-size: 14px;
-    color: var(--gray);
+    color: var(--light-blue);
 }
 
 .recommended-friends span {
     margin: 100px 0px;
     display: block;
-    color: var(--gray);
+    color: var(--light-blue);
     text-align: center;
     font-size: 18px;
 }
@@ -29,11 +29,13 @@
 }
 
 .open-chat__header h4 {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--light-blue);
+    opacity: 0.5;
 }
 
 .open-chat__header span {
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--light-blue);
+    opacity: 0.3;
 }
 
 .open-post {

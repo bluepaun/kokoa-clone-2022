@@ -22,22 +22,102 @@
     width: 75%;
 }
 
+.login-bg {
+    margin: 0px 30px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    z-index: 0;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+@keyframes rotateAni {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.login-bg::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        transparent,
+        var(--light-blue),
+        var(--light-blue)
+    );
+    transform-origin: bottom right;
+    animation: rotateAni 5s linear infinite;
+    animation-delay: -2.5s;
+    z-index: 0;
+}
+
+.login-bg::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        transparent,
+        var(--light-blue),
+        var(--light-blue)
+    );
+    transform-origin: bottom right;
+    animation: rotateAni 5s linear infinite;
+    z-index: 0;
+}
+
 #login-form {
+    position: absolute;
+    background-color: var(--bg-black);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 30px;
+    justify-content: center;
+    z-index: 2;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#login-form .input-box {
+    position: relative;
+    margin-top: 25px;
+    width: 80%;
 }
 
 #login-form input {
-    border: none;
     height: 50px;
-    font-size: 18px;
     width: 100%;
+    font-size: 18px;
+    position: relative;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: var(--light-blue);
+}
+
+#login-form input::before {
+    content: "";
 }
 
 #login-form input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--light-blue);
+    opacity: 0.5;
 }
 
 #login-form button {
@@ -45,10 +125,65 @@
     height: 50px;
     margin: 5px 0px;
     font-size: 18px;
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
     cursor: pointer;
-    background-color: var(--yellow);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: color 0.5s, letter-spacing 0.5s, border-color 0.5s;
+    background-color: var(--bg-black);
+    position: relative;
+    border: 2px solid white;
+    color: white;
+}
+
+#login-form button:hover {
+    letter-spacing: 0.25em;
+    border-color: var(--neo-blue);
+    box-shadow: 0px 0px 25px var(--neo-blue);
+    color: var(--neo-blue);
+}
+
+#login-form button i {
+    position: absolute;
+    display: block;
+    inset: 0px;
+}
+
+#login-form button i:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background-color: var(--bg-black);
+    transform: skewX(325deg) translateX(-50%);
+    transition: 0.5s;
+}
+
+#login-form button:hover i:before {
+    width: 20px;
+    left: 20%;
+}
+
+#login-form button i:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background-color: var(--bg-black);
+    transform: skewX(325deg) translateX(-50%);
+    transition: 0.5s;
+}
+
+#login-form button:hover i:after {
+    width: 20px;
+    left: 80%;
 }
 
 #login-form button:nth-of-type(1) {
@@ -59,16 +194,4 @@
     color: inherit;
     margin-top: 10px;
     text-decoration: none;
-}
-
-#login-form input:not([type="submit"]) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: border-color 0.3s ease-in-out;
-}
-
-#login-form input:focus {
-    border-color: var(--yellow);
-}
-
-#login-form input:not([type="submit"]):focus {
 }

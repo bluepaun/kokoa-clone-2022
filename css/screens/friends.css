@@ -1,19 +1,19 @@
 #friends-display-link {
     display: block;
     text-align: center;
-    background-color: #fafafa;
+    background-color: var(--bg-light-black);
     padding: 10px 0px;
     margin-bottom: 10px;
     margin-top: -15px;
 }
 
 #friends-display-link i {
-    color: #d5d5d5;
+    color: var(--white);
 }
 
 .friends-screen__channel {
     margin-top: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--white);
     padding-top: 15px;
 }
 
@@ -22,7 +22,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--light-blue);
+    opacity: 0.7;
 }
 
 @keyframes hiddenAnimation {
@@ -48,7 +49,6 @@
     align-items: center;
     flex-direction: column;
     font-size: 3rem;
-    color: var(--light-blue);
     animation: hiddenAnimation 0.5s ease-in-out forwards;
     animation-delay: 7s;
     z-index: 4;

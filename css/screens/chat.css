@@ -1,9 +1,11 @@
 #chat-screen {
     background-color: #abc0d1;
     height: 1000vh;
+    color: #222222;
 }
 
 #chat-screen .status-bar {
+    color: #222222;
     background-color: #abc0d1;
 }
 
