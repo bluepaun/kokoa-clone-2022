@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Welcome to ChochoTalk</title>
+        <title>Welcome to NomardTalk</title>
     </head>
     <body>
         <div class="status-bar">
@@ -23,27 +23,35 @@
             </div>
         </div>
         <header class="welcome-header">
-            <h1 class="welcome-header__title">Welcome to ChochoTalk</h1>
+            <h1 class="welcome-header__title">Welcome to NomardTalk</h1>
             <p class="welcome-header__text">
-                If you have a ChochoTalk Account,<br />log in with your email or
+                If you have a Nomard Account,<br />log in with your email or
                 phone number.
             </p>
         </header>
         <main>
-            <form action="friends.html" method="get" id="login-form">
-                <input
-                    name="username"
-                    type="text"
-                    placeholder="Email or phone number"
-                />
-                <input name="password" type="password" placeholder="Password" />
-                <button>Log in</button>
-                <button>Sign Up</button>
-                <input type="submit" value="Test!" />
-                <a href="#">Find Chocho Account or Password</a>
-            </form>
+            <div class="login-bg">
+                <form action="friends.html" method="get" id="login-form">
+                    <div class="input-box">
+                        <input
+                            name="username"
+                            type="text"
+                            placeholder="Email or phone number"
+                        />
+                    </div>
+                    <div class="input-box">
+                        <input
+                            name="password"
+                            type="password"
+                            placeholder="Password"
+                        />
+                    </div>
+                    <button>Log in <i></i></button>
+                    <button>Sign Up <i></i></button>
+                    <a href="#">Find Account or Password</a>
+                </form>
+            </div>
         </main>
-        <footer></footer>
         <div id="no-mobile">
             <span>Your screen is too big</span>
             <i class="fa-solid fa-comment fa-2x"></i>

@@ -22,7 +22,8 @@
 
 body {
     font-family: "Source Sans Pro", sans-serif;
-    color: #2e363e;
+    color: var(--light-blue);
+    background-color: var(--bg-black);
 }
 
 .main-screen {
