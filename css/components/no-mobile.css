@@ -13,6 +13,98 @@
     flex-direction: column-reverse;
 }
 
+.no-mobile__icon {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateX(1.5em);
+}
+
+@keyframes rotateClockwiseAni {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateAntiClockwiseAni {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.no-mobile__icon .ring {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    margin-left: -3em;
+    --ani-duration: 2.5s;
+}
+
+.no-mobile__icon .ring:first-child {
+    border-top: 4px solid #1e9bff;
+    animation: rotateClockwiseAni var(--ani-duration) linear infinite;
+}
+
+.no-mobile__icon .ring:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0.9em;
+    right: 0.3em;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #1e9bff;
+    box-shadow: 0 0 0 5px #1e9bff33, 0 0 0 10px #1e9bff22, 0 0 0 20px #1e9bff11,
+        0 0 30px #1e9bff, 0 0 40px #1e9bff;
+}
+
+.no-mobile__icon .ring:nth-child(2) {
+    animation: rotateAntiClockwiseAni var(--ani-duration) linear infinite;
+    border-bottom: 4px solid #93ff2d;
+}
+
+.no-mobile__icon .ring:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    bottom: 0.9em;
+    right: 0.3em;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #93ff2d;
+    box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d22, 0 0 0 20px #93ff2d11,
+        0 0 30px #93ff2d, 0 0 40px #93ff2d;
+}
+
+.no-mobile__icon .ring:nth-child(3) {
+    position: absolute;
+    top: -2.6em;
+    border-top: 4px solid #e41cf8;
+    animation: rotateAntiClockwiseAni var(--ani-duration) linear infinite;
+}
+
+.no-mobile__icon .ring:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0.9em;
+    left: 0.3em;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #e41cf8;
+    box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811,
+        0 0 30px #e41cf8, 0 0 40px #e41cf8;
+}
+
 @media screen and (max-width: 650px) {
     #no-mobile {
         display: none;

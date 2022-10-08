@@ -9,7 +9,7 @@
 }
 
 .nav__list {
-    margin: 15px 0px;
+    padding: 15px 0px;
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -29,6 +29,22 @@
     animation: appearAnimation 0.3s ease-in-out forwards;
     transform: translateY(50px);
     opacity: 0;
+    z-index: 2;
+}
+
+.nav__btn a > div {
+    transition: 0.5s;
+}
+
+.nav__btn.active a > div,
+.nav__btn:hover a > div {
+    transform: translateY(-2em);
+    color: var(--bg-light-black);
+}
+
+.nav__list:has(.nav__btn:hover) .nav__btn:not(:hover).active a > div {
+    transform: none;
+    color: var(--light-blue);
 }
 
 .nav__btn:nth-child(2) {
@@ -66,6 +82,79 @@
 }
 
 .nav__badge_dot {
+    top: 2px;
     right: -5px;
     position: absolute;
+}
+
+.nav__list .indicator {
+    --gap: calc((100% - 4 * 32px) / 8);
+    --next: calc(var(--gap) * 2 + 32px);
+    position: absolute;
+    top: -1.9em;
+    left: calc(var(--gap) + 1 * var(--next));
+    transform: translateX(-13px);
+    width: calc(3em + 10px);
+    padding-bottom: 3em;
+    background-color: var(--green);
+    border-radius: 50%;
+    transition: left 0.5s;
+    border: 5px solid var(--bg-black);
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    left: -17px;
+    top: 50%;
+    border-top-right-radius: 30px;
+
+    box-shadow: 0px -10px 0 0 var(--bg-black);
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    right: -17px;
+    top: 50%;
+    border-top-left-radius: 30px;
+    box-shadow: 0px -10px 0 0 var(--bg-black);
+}
+
+.nav__btn:nth-child(1).active ~ .indicator {
+    left: calc(var(--gap) + 0 * var(--next));
+}
+
+.nav__btn:nth-child(2).active ~ .indicator {
+    left: calc(var(--gap) + 1 * var(--next));
+}
+
+.nav__btn:nth-child(3).active ~ .indicator {
+    left: calc(var(--gap) + 2 * var(--next));
+}
+
+.nav__btn:nth-child(4).active ~ .indicator {
+    left: calc(var(--gap) + 3 * var(--next));
+}
+
+.nav__btn:nth-child(1):hover ~ .indicator {
+    left: calc(var(--gap) + 0 * var(--next));
+}
+
+.nav__btn:nth-child(2):hover ~ .indicator {
+    left: calc(var(--gap) + 1 * var(--next));
+}
+
+.nav__btn:nth-child(3):hover ~ .indicator {
+    left: calc(var(--gap) + 2 * var(--next));
+}
+
+.nav__btn:nth-child(4):hover ~ .indicator {
+    left: calc(var(--gap) + 3 * var(--next));
 }

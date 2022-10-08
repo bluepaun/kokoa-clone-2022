@@ -101,24 +101,56 @@
 #login-form input {
     height: 50px;
     width: 100%;
-    font-size: 18px;
+    font-size: 1.3em;
     position: relative;
     padding: 20px 10px 10px;
     background: transparent;
     border: none;
     box-shadow: none;
     outline: none;
+    color: var(--bg-black);
+    z-index: 2;
+}
+
+#login-form .input-box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #8f8f8f;
+    padding: 20px 10px 10px;
+    font-size: 1.3em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#login-form .input-box input:valid ~ span,
+#login-form .input-box input:focus ~ span {
     color: var(--light-blue);
+    transform: translateX(-10px) translateY(-90%);
+    font-size: 1em;
 }
 
-#login-form input::before {
-    content: "";
+#login-form .input-box i {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--light-blue);
+    border-radius: 4px;
+    pointer-events: none;
+    transition: 0.5s;
 }
 
-#login-form input::placeholder {
+#login-form .input-box input:valid ~ i,
+#login-form .input-box input:focus ~ i {
+    height: 100%;
+}
+
+/* #login-form input::placeholder {
     color: var(--light-blue);
     opacity: 0.5;
-}
+} */
 
 #login-form button {
     border: none;
